@@ -13,4 +13,4 @@ My Facebok    : https://web.facebook.com/xroot.xroot.7
 
 My Youtube    : https://www.youtube.com/@bangboy-opreker
 
-CONFIG Clash For Android   : Bisa Pesan Config Premium Khusus Tools Mihomo Siap Online
+CONFIG Clash For Android   : Bisa Pesan Config Premium Khusus Tools Clash For Android Siap Online
