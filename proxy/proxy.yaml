@@ -1,0 +1,18 @@
+proxies:
+# RAKITAN CONFIG Boychongzen aka Xroot
+
+- name: OPOK
+  server: app.gopay.co.id
+  port: 443
+  type: trojan
+  password: xxxxxxxxxxxxxxxxxxxxxxx
+  skip-cert-verify: true
+  sni: akun.anda.com
+  network: ws
+  ws-opts:
+    path: /trojan
+    headers:
+      Host: akun.anda.com
+  udp: true
+  
+      
