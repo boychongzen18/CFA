@@ -12,7 +12,7 @@ rule-providers:
     type: file
     behavior: classical
     path: "./adblock.yaml"
-  Speedtest:
+  youtube:
     type: file
     behavior: classical
     path: "./speedtest.yaml"
@@ -48,11 +48,12 @@ proxy-groups:
   proxies:
   - DIRECT
   - Internet
-- name: Speedtest
+- name: Youtube
   type: select
   disable-udp: true
-  use:
-  - VPN
+  proxies:
+  - DIRECT
+  - Internet
 port: 7890
 socks-port: 7891
 redir-port: 7892
@@ -197,7 +198,7 @@ rules:
 - RULE-SET,Direct,DIRECT
 - RULE-SET,Reject,REJECT
 - RULE-SET,Ads-18+,Ads-18+
-- RULE-SET,Speedtest,Speedtest
+- RULE-SET,Youtube,Youtube
 - RULE-SET,WA,Whatsapp
 - MATCH,GLOBAL
 
