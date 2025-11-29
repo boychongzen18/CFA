@@ -1,3 +1,4 @@
+# RULES CONFIG Boychongzen aka Xroot
 payload:
   # TikTok Only
   - DOMAIN-SUFFIX,byteoversea.com
