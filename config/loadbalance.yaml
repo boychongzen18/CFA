@@ -1,29 +1,41 @@
 ---
 rule-providers:
   Direct:
-    type: file
+    type: http
     behavior: classical
     path: "./direct.yaml"
+    url: https://raw.githubusercontent.com/boychongzen18/CFA/refs/heads/main/rules/direct.yaml
+    interval: 100
   Reject:
-    type: file
+    type: http
     behavior: classical
     path: "./reject.yaml"
+    url: https://raw.githubusercontent.com/boychongzen18/CFA/refs/heads/main/rules/reject.yaml
+    interval: 100
   Ads-18+:
-    type: file
+    type: http
     behavior: classical
     path: "./adblock.yaml"
+    url: https://raw.githubusercontent.com/boychongzen18/CFA/refs/heads/main/rules/adblock.yaml
+    interval: 100
   Youtube:
-    type: file
+    type: http
     behavior: classical
     path: "./youtube.yaml"
+    url: https://raw.githubusercontent.com/boychongzen18/CFA/refs/heads/main/rules/youtube.yaml
+    interval: 100
   WA:
-    type: file
+    type: http
     behavior: classical
     path: "./whatsapp.yaml"
+    url: https://raw.githubusercontent.com/boychongzen18/CFA/refs/heads/main/rules/whatsapp.yaml
+    interval: 100
   Tiktok:
-    type: file
+    type: http
     behavior: classical
-    path: "./tiktok.yaml"	
+    path: "./tiktok.yaml"
+    url: https://raw.githubusercontent.com/boychongzen18/CFA/refs/heads/main/rules/tiktok.yaml
+    interval: 100	
 proxy-providers:
   VPN:
     type: file
