@@ -20,6 +20,10 @@ rule-providers:
     type: file
     behavior: classical
     path: "./whatsapp.yaml"
+  Tiktok:
+    type: file
+    behavior: classical
+    path: "./tiktok.yaml"	
 proxy-providers:
   VPN:
     type: file
@@ -27,33 +31,39 @@ proxy-providers:
     health-check:
       enable: true
       url: https://cp.cloudflare.com/generate_204
-      interval: 300
+      interval: 10
 proxy-groups:
-- name: Internet
-  type: fallback
+- name: Akun Premium
+  type: select
   disable-udp: false
   use:
   - VPN
-  url: http://www.gstatic.com/generate_204
-  interval: '30'
+  url: https://cp.cloudflare.com/generate_204
+  interval: '10'
 - name: Ads-18+
   type: select
   disable-udp: false
   proxies:
   - REJECT
-  - Internet
+  - Akun Premium
 - name: Whatsapp
   type: select
   disable-udp: false
   proxies:
   - DIRECT
-  - Internet
-- name: Youtube
+  - Akun Premium
+- name: Youtube 
   type: select
   disable-udp: true
   proxies:
   - DIRECT
-  - Internet
+  - Akun Premium
+- name: Tiktok 
+  type: select
+  disable-udp: true
+  proxies:
+  - DIRECT
+  - Akun Premium 
 port: 7890
 socks-port: 7891
 redir-port: 7892
@@ -198,7 +208,7 @@ rules:
 - RULE-SET,Direct,DIRECT
 - RULE-SET,Reject,REJECT
 - RULE-SET,Ads-18+,Ads-18+
-- RULE-SET,Youtube,Youtube
+- RULE-SET, Youtube,Youtube 
 - RULE-SET,WA,Whatsapp
+- RULE-SET,Tiktok,Tiktok 
 - MATCH,GLOBAL
-
