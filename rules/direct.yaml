@@ -1,5 +1,5 @@
-# RULES CONFIG Boychongzen aka Xroot
 payload:
-
+  # Hotstar
+  - IP-CIDR,192.168.1.1/24
 
 
