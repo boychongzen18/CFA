@@ -1,6 +1,7 @@
 proxies:
-# RAKITAN CONFIG Boychongzen aka Xroot
-
+# ===============================================
+          ##-> RAKITAN BugHost OPOK  <-##
+# ===============================================
 - name: TJ OPOK
   server: app.gopay.co.id
   port: 443
@@ -14,6 +15,7 @@ proxies:
     headers:
       Host: akun.anda.com
   udp: true
+# ===============================================  
 - name: VMESS Opok 443
   type: vmess
   server: app.gopay.co.id
@@ -30,4 +32,5 @@ proxies:
     path: /vmess
     headers:
       Host: akun.anda.com
+ # ===============================================     
       
