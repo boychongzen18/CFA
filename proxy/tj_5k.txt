@@ -1,0 +1,25 @@
+🌟 AKUN TROJAN PREMIUM 🌟
+
+🔹 Informasi Akun
+┌─────────────────────
+│ Username : boy
+│ Domain   : cfstre.isdarprem.cloud
+│ Port TLS : 443
+│ Port HTTP: 80
+│ Security : Auto
+│ Network  : Websocket (WS)
+│ Path     : /trojan-ws
+│ Path GRPC: trojan-grpc
+└─────────────────────
+🔐 URL TROJAN TLS
+trojan://8d877d00-b871-4c9a-b2fe-155a6b43964f@cfstre.isdarprem.cloud:443?path=%2Fwhatever%2Ftrojan-ws&security=tls&host=cfstre.isdarprem.cloud&type=ws&sni=cfstre.isdarprem.cloud#boy
+
+🔒 URL TROJAN GRPC
+trojan://8d877d00-b871-4c9a-b2fe-155a6b43964f@cfstre.isdarprem.cloud:443?mode=gun&security=tls&type=grpc&serviceName=trojan-grpc&sni=cfstre.isdarprem.cloud#boy
+
+┌─────────────────────
+│ Expiry: 2025-12-26
+└─────────────────────
+
+
+
