@@ -143,7 +143,6 @@ proxies:
     path: /vmess
     headers:
       Host: AKUN
-  udp: true
 - name: VMESS DUA
   server: BUGHOST
   port: 443
@@ -158,8 +157,7 @@ proxies:
   ws-opts:
     path: /vmess
     headers:
-      Host: AKUN
-  udp: true  
+      Host: AKUN  
 proxy-groups:
 - name: VMESS 
   type: load-balance
@@ -168,4 +166,5 @@ proxy-groups:
   - VMESS DUA
   - DIRECT
 rules:
+
 - MATCH,VMESS
