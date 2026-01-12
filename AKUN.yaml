@@ -166,5 +166,5 @@ proxy-groups:
   - VMESS DUA
   - DIRECT
 rules:
-
 - MATCH,VMESS
+
