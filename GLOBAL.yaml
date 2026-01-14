@@ -128,7 +128,31 @@ dns:
   - '*.mcdn.bilivideo.cn'
   - +.media.dssott.com
 proxies:
-- name: VMESS SATU
+- name: TROJAN
+  type: trojan
+  server: BUGHOST
+  port: 443
+  password: XXXXXXXXXXXXXXX
+  udp: true
+  sni: AKUN
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /trojan
+    headers:
+      Host: AKUN
+- name: GRPC
+  type: trojan
+  server: BUGHOST
+  port: 443
+  password: XXXXXXXXXXXXXXXX
+  udp: true
+  sni: AKUN
+  skip-cert-verify: true
+  network: grpc
+  grpc-opts:
+    grpc-service-name: Trojan-GRPC
+- name: VMESS
   server: BUGHOST
   port: 443
   type: vmess
@@ -143,28 +167,29 @@ proxies:
     path: /vmess
     headers:
       Host: AKUN
-- name: VMESS DUA
+- name: VLESS
+  type: vless
   server: BUGHOST
   port: 443
-  type: vmess
-  uuid: fb9312bb-ec7c-401e-a1c4-7cc4d1393d10
-  alterId: 0
-  cipher: auto
-  tls: true
+  uuid: f485efb4-ddd6-4975-b4a3-86a4f89757f8
+  udp: true
   skip-cert-verify: true
+  tls: true
   servername: AKUN
   network: ws
   ws-opts:
-    path: /vmess
+    path: /vless
     headers:
-      Host: AKUN  
+      Host: AKUN   
 proxy-groups:
-- name: VMESS 
+- name: ALL TUNNELLING
   type: load-balance
   proxies:
-  - VMESS SATU
-  - VMESS DUA
+  - TROJAN
+  - GRPC
+  - VMESS
+  - VLESS
   - DIRECT
+  - REJECT
 rules:
-- MATCH,VMESS
-
+- MATCH,ALL TUNNELLING
